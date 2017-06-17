@@ -1,0 +1,9 @@
+
+config MTK_BMA255_NEW
+       bool "MTK_BMA255_NEW for Mediatek package"
+	default n
+	help
+	  It support different accelerometer sensor.
+          If this option is set,
+	  it will support
+          MTK_BMA255_NEW Accelerometer.

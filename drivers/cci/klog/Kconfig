@@ -1,0 +1,133 @@
+config CCI_KLOG
+	bool "CCI KLog <?>"
+	default n
+	help
+	  ****** NOTE: configuration overwrite order: BoardConfig/ProjectConfig > Kconfig ******
+	  ****** If you have BoardConfig/ProjectConfig, please DO NOT change this configuration here ******
+	  CCI kernel and logcat log collector.
+
+config CCI_KLOG_RECORD_KERNEL_TIMESTAMP
+	bool "Record kernel timestmp into KLog header area"
+	depends on CCI_KLOG
+	default y
+	help
+	  This option enables KLog to record the kernel timestamp into the CCI KLog header area.
+
+config CCI_KLOG_RECORD_RPM_VERSION
+	bool "Record the RPM firmware version into KLog header area"
+	depends on CCI_KLOG
+	default n
+	help
+	  This option enables KLog to record the RPM firmware version into the CCI KLog header area.
+          This may only be useful in DA80, DA80_ICS and SA77 projects.
+
+config CCI_KLOG_START_ADDR_PHYSICAL
+	hex "Physical memory start address <?>"
+	depends on CCI_KLOG
+	help
+	  ****** NOTE: configuration overwrite order: BoardConfig/ProjectConfig > Kconfig ******
+	  ****** If you have BoardConfig/ProjectConfig, please DO NOT change this configuration here ******
+	  The start address of KLog buffer on physical memory.
+
+config CCI_KLOG_SIZE
+	hex "Total buffer size <?>"
+	depends on CCI_KLOG
+	help
+	  ****** NOTE: configuration overwrite order: BoardConfig/ProjectConfig > Kconfig ******
+	  ****** If you have BoardConfig/ProjectConfig, please DO NOT change this configuration here ******
+	  The total buffer size of CCI KLog.
+
+config CCI_KLOG_HEADER_SIZE
+	hex "Header size <?>"
+	depends on CCI_KLOG
+	help
+	  ****** NOTE: configuration overwrite order: BoardConfig/ProjectConfig > Kconfig ******
+	  ****** If you have BoardConfig/ProjectConfig, please DO NOT change this configuration here ******
+	  The header buffer size of CCI KLog.
+
+config CCI_KLOG_CRASH_SIZE
+	hex "Crash size <?>"
+	depends on CCI_KLOG
+	help
+	  ****** NOTE: configuration overwrite order: BoardConfig/ProjectConfig > Kconfig ******
+	  ****** If you have BoardConfig/ProjectConfig, please DO NOT change this configuration here ******
+	  The crash buffer size of CCI KLog.
+
+config CCI_KLOG_APPSBL_SIZE
+	hex "AppSBL size <?>"
+	depends on CCI_KLOG
+	help
+	  ****** NOTE: configuration overwrite order: BoardConfig/ProjectConfig > Kconfig ******
+	  ****** If you have BoardConfig/ProjectConfig, please DO NOT change this configuration here ******
+	  The AppSBL size of CCI KLog.
+
+config CCI_KLOG_KERNEL_SIZE
+	hex "Kernel size <?>"
+	depends on CCI_KLOG
+	help
+	  ****** NOTE: configuration overwrite order: BoardConfig/ProjectConfig > Kconfig ******
+	  ****** If you have BoardConfig/ProjectConfig, please DO NOT change this configuration here ******
+	  The kernel buffer size of CCI KLog.
+
+config CCI_KLOG_ANDROID_MAIN_SIZE
+	hex "Android main size <?>"
+	depends on CCI_KLOG
+	help
+	  ****** NOTE: configuration overwrite order: BoardConfig/ProjectConfig > Kconfig ******
+	  ****** If you have BoardConfig/ProjectConfig, please DO NOT change this configuration here ******
+	  The Android main buffer size of CCI KLog.
+
+config CCI_KLOG_ANDROID_SYSTEM_SIZE
+	hex "Android system size <?>"
+	depends on CCI_KLOG
+	help
+	  ****** NOTE: configuration overwrite order: BoardConfig/ProjectConfig > Kconfig ******
+	  ****** If you have BoardConfig/ProjectConfig, please DO NOT change this configuration here ******
+	  The Android system buffer size of CCI KLog.
+
+config CCI_KLOG_ANDROID_RADIO_SIZE
+	hex "Android radio size <?>"
+	depends on CCI_KLOG
+	help
+	  ****** NOTE: configuration overwrite order: BoardConfig/ProjectConfig > Kconfig ******
+	  ****** If you have BoardConfig/ProjectConfig, please DO NOT change this configuration here ******
+	  The Android radio buffer size of CCI KLog.
+
+config CCI_KLOG_ANDROID_EVENTS_SIZE
+	hex "Android events size <?>"
+	depends on CCI_KLOG
+	help
+	  ****** NOTE: configuration overwrite order: BoardConfig/ProjectConfig > Kconfig ******
+	  ****** If you have BoardConfig/ProjectConfig, please DO NOT change this configuration here ******
+	  The Android events buffer size of CCI KLog.
+
+config CCI_KLOG_ALLOW_FORCE_PANIC
+	bool "Allow force panic function <?>"
+	depends on CCI_KLOG
+	default n
+	help
+	  ****** NOTE: configuration overwrite order: BoardConfig/ProjectConfig > Kconfig ******
+	  ****** If you have BoardConfig/ProjectConfig, please DO NOT change this configuration here ******
+	  Allows the force panic function.
+	  This function should be disabled in user-variant or shipping build.
+
+config CCI_KLOG_SUPPORT_CCI_ENGMODE
+	bool "Support CCI EngMode function <?>"
+	depends on CCI_KLOG
+	default n
+	help
+	  ****** NOTE: configuration overwrite order: BoardConfig/ProjectConfig > Kconfig ******
+	  ****** If you have BoardConfig/ProjectConfig, please DO NOT change this configuration here ******
+	  Supports CCI EngMode function.
+	  This may only be useful in DA80_ICS project.
+
+config CCI_KLOG_SUPPORT_RESTORATION
+	bool "Support restoration function <?>"
+	depends on CCI_KLOG
+	default n
+	help
+	  ****** NOTE: configuration overwrite order: BoardConfig/ProjectConfig > Kconfig ******
+	  ****** If you have BoardConfig/ProjectConfig, please DO NOT change this configuration here ******
+	  Supports the restoration function.
+	  This may only be useful in VY5x project.
+

@@ -1,0 +1,9 @@
+
+config MTK_GMC303_NEW
+        bool "MTK_GMC303_NEW for Mediatek package"
+        default n
+	help
+	  It support different magnetometer sensor.
+          If this option is set,
+	  it will support
+          GMC303 magnetometer.

@@ -1,0 +1,30 @@
+#
+# Sony diag related
+#
+
+menuconfig SONY_DIAG
+	bool "Support Sony diag solution"
+	default y
+	help
+	  This option enables sony diag solution.
+
+if SONY_DIAG
+
+config SONY_DBGCONTROL
+	bool "Support Sony dbgcontrol feature"
+	default y
+	help
+	  This option enables sony dbgcontrol.We use dbgcontrol to
+          trigger system crash on odm product.This feature can works
+          on eng/userdebug/user varient.The wiki for this:
+          https://wiki.sonyericsson.net/odm/Dbgcontrol
+
+config POWERKEY_FORCECRASH
+	tristate "Force a crash on powerkey long press"
+	default n
+	help
+	  Say Y here if you want force crash functionality through power
+	  key. Triggers panic if power key is hold for more than 30 secs.
+
+endif
+

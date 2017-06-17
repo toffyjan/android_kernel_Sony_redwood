@@ -1,0 +1,9 @@
+
+config CONFIG_MTK_STK3X1X_NEW
+	bool "stk3x1x for MediaTek package"
+	default y
+	help
+	It support different type sensor
+	in this platform. If this option
+	is set, it will support ambient
+	and light sensor CM36558.

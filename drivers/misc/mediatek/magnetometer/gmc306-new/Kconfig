@@ -1,0 +1,20 @@
+
+config MTK_GMC306_NEW
+        bool "MTK_GMC306_NEW for Mediatek package"
+        default n
+	help
+	  It support different magnetometer sensor.
+          If this option is set,
+	  it will support
+          GMC306 magnetometer.
+
+config CUSTOM_KERNEL_SENSORHUB
+        bool "MTK_GMC306 for Mediatek package SENSORHUB"
+        default n
+        help
+        Say Y here if you have MTK_GMC306 touch panel CUSTOM_KERNEL_SENSORHUB.
+
+        If unsure, say N.
+
+        To compile this dirver as a module, choose M here: the
+        module will be called.
